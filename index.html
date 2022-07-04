@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset='utf-8'>
+    
+    <meta lang="en">
+
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <title>Cats and Dogs!</title>
+
+    <link rel = "icon" href ="./images/favicon.png">
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+
+    <!--Fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" 
+    rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap" 
+    rel="stylesheet">
+
+</head>
+
+<body>
+   
+    <header>
+
+      <nav class="headerNav">
+
+        <div class="logoAndTitle">
+
+          <img class="logo" src="./images/favicon.png">
+        
+          <h1 class="catsAndDogs">Cats And Dogs!</h1>
+
+        </div>
+
+          <a class="navAppears">Home</a>
+
+          <a class="navAppears">Menu</a>
+          
+          <a class="navAppears">Log In</a>
+          
+          <a class="navAppears">Create Account</a>
+          
+          <a class="navAppears">Gallery</a>
+
+          <a href="#detailTarget" class="eventListenerCart">
+
+               <div class="cart">
+
+                <p class="cartAmount"></p>         
+
+               </a>
+
+            </div>
+
+          </nav>
+
+    </header>
+
+<main>
+
+    <section class="productsEntire">
+
+        <h2 class="productsTitle">Products in stock:</h2>
+
+     <div class="productContainer">
+
+    <!--cartProduct ready, for later printing with FireBase info / JS printing-->
+
+<!-- 
+        <div class="cardProduct">
+
+            <div class="productImage">
+
+            </div>
+
+                <div class="productTypeAndPrice">
+
+            <h3 class="productType">Pro Plan Adult (Cat)</h3>
+
+                <div class="priceContainer">
+
+            <p class="price">Price: $</p>
+        
+                </div>
+                                    </div>
+
+            <button class="addToCartButton">Add to Cart</button>
+
+        </div>
+
+         -->
+
+        </div>
+
+   <section class="cartContainer"> 
+
+    <div class="here">
+
+    <!--CARD IN CART PROTOTYPE!-->
+
+  <!-- <div class="productInCart">
+
+    <div class="separator">
+
+        <img class="imageInCart" src="./images/proPlanPrueba.png">
+
+       <div class="containerTitleQuantityPriceCart">
+
+           <h4 class="productTitleInCart">Cat Chow loco</h3>
+
+           <p class="quantity">Quantity: 5</p>
+
+           <p class="priceInCart">Price: $5</p>
+           </div>
+           
+
+       </div>
+
+           <button class="removeFromCart">Remove</button>
+
+                </div> -->
+    </div>
+    
+    <div class="detailContainer">
+
+        <div class="totalContainer">
+
+            <p class="total">Total: <span class="totalNumber"></span> </p>
+
+              </div>
+
+                  </div>
+
+<div class="cartButtonContainer">
+
+    <button class="buttonEmpty">Empty Cart</button>
+
+    <input class="buttonFinish" type="submit" value="Finish Purchase"></input>
+
+                                   </div>
+
+        </section>
+
+    </section>
+
+    </main>
+
+    <footer>
+
+
+    <div class="footerFirstPart">
+
+        <a class="aFooter" href="">About Us</a>
+
+        <a class="aFooter" href="">Contact</a>
+
+        <a class="aFooter" href="">FAQ</a>
+    
+        <a class="aFooter" href="">Return Policy</a>
+
+        <a class="aFooter" href="">Terms and Conditions</a>
+
+                        </div>
+
+<div class="footerSecondPart">
+
+    <div class="footerText">
+
+        <h3 class="weOffer">We offer Free Shipping across the US if your purchase is over $200 USD</h3>
+
+                </div>
+
+        <p class="subscribeText">Subscribe to our Newsletter:</p>
+
+<div class="emailButtonContainer">
+
+        <input class="inputEmail" type="email" placeholder="Type your E-mail">
+
+        <button class="buttonSubscribe">Subscribe</button>
+
+           </div>
+
+                                  </div>
+
+    </footer>
+
+    <!-- script.js with type="module" allows to export and import from firebase.js -->
+
+    <script src='script.js' type="module"></script>
+
+</body>
+
+</html>

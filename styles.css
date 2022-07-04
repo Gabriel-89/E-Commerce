@@ -1,0 +1,592 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.headerNav {
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    background-color: #4ECDC4;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* Corregir display FLEX A NONE */
+.navAppears {
+    display:none;
+    font-family: 'Signika Negative', sans-serif;
+    color:#F7FFF7;
+    margin-left: 1rem;
+
+}
+
+.navAppears:hover {
+    
+    color:#b5e48c;
+
+}
+
+.logoAndTitle{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 4rem;
+    height: 3em;
+}
+
+.catsAndDogs {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8em;
+    color: #1A535C;
+    font-family: 'Dancing Script', cursive;
+    margin-left: 1rem;
+    text-shadow: 0 0 3px #1A535C;
+    
+}
+
+
+.cart {
+
+    display: flex;
+    height: 4rem;
+    width: 4rem;
+    position: relative;
+    background-image: url(./images/cartIcon.png);
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    margin-top: .5rem;
+    margin-left: 2rem;
+
+}
+
+.eventListenerCart {
+    text-decoration: none;
+}
+
+.cartAmount {
+    font-size: 1.1em;
+    color: #F7FFF7;
+    text-decoration: none;
+}
+
+.productsEntire {
+
+    background-color: #dfd291;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-image: url(./images/pawsBackground.png);
+    background-repeat: repeat;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.productsTitle {
+
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Signika Negative', sans-serif;
+    color: #ffffff;
+    font-size: 2.2em;
+    
+    
+}
+
+.productContainer {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+
+
+}
+
+/* Card Styles */
+
+.cardProduct {
+
+    display: flex;
+    width: 20rem;
+    height: 5.57rem;
+    border-radius: 10px;
+    background-color: #F7FFF7;
+    margin-bottom: 2px;
+    border: 1px solid grey;
+    opacity: .94;
+    flex-direction: row;
+    
+}
+
+/* Card content! */
+
+.productImage {
+
+    display: flex;
+    background-size: 4rem 5rem;
+    background-repeat: no-repeat;
+    width: 4rem;
+    height: 5rem;
+    align-self: center;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.productType {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    width: 10rem;
+    height: 1.5em;
+    font-size: 1em;
+    margin-top: 5px;
+    color: #1A535C;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.priceContainer {
+
+    display:flex;
+    position: relative;
+    justify-content: flex-start;
+
+}
+
+.price {
+
+    display: flex;
+    position: relative;
+    width: 7rem;
+    height: 1.2em;
+    font-size: 1.2em;
+    align-self: flex-end;
+    color: #5CA4A9;
+    font-family: 'Signika Negative', sans-serif;
+    margin-top: 1.5rem;
+
+    
+}
+
+.addToCartButton {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    width: 5.2rem;
+    height: 4.5rem;
+    background-color: #49C6E5;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 3px;
+    color: #000000;
+    opacity: 1;
+}
+
+/* Cart start, with details, starting DISPLAY: NONE on .cartContainer */
+
+.cartContainer {
+
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    background-color: #F4F1BB;
+
+}
+
+.productInCart {
+    width: 100%;
+    height: 6.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: .1px dotted #000000;
+}
+
+.imageInCart {
+    width: 4rem;
+    height:6rem;
+    align-self: center;
+    margin-left: .5rem;
+}
+
+.separator {
+    display: flex;
+    width: 100%;
+    height: 6.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.containerTitleQuantityPriceCart {
+
+    display: flex;
+    width: 100%;
+    height: 6.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.quantityNumber {
+    width: 5rem;
+    margin-left: 5px;
+}
+
+.productTitleInCart {
+    display: flex;
+    width: 100%;
+    height: 1.1em;
+    font-size: 1.2em;
+    font-family: 'Signika Negative', sans-serif;
+
+}
+
+.quantity {
+    display: flex;
+    width: 8rem;
+    height: 1.1em;
+    font-size: 1.05em;
+    font-family: 'Signika Negative', sans-serif;
+    margin-top: 2rem;
+    
+    
+}
+
+.removeFromCart {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    width: 5.2rem;
+    height: 4.5rem;
+    background-color: #49C6E5;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 3px;
+    color: #000000;
+    opacity: 1;
+    margin-right: 15px;
+}
+
+.priceInCart {
+
+    width: 100%;
+    height: 1.1em;
+    font-size: 1.3em;
+    font-family: 'Signika Negative', sans-serif;
+    margin-left: 3.7em;
+    
+    
+ 
+
+}
+
+.detailContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    
+
+}
+
+.productInCartContainer {
+
+    width: 100%;
+    height: 5rem;
+    border-bottom: #000000;
+
+}
+
+
+
+/* Card content! */
+
+.productImage {
+
+    display: flex;
+    background-size: 4rem 5rem;
+    background-repeat: no-repeat;
+    width: 4rem;
+    height: 5rem;
+    align-self: center;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+
+.totalContainer {
+
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 2rem;
+        align-self: flex-end;
+        justify-content: flex-end;
+}
+
+.total{
+
+    font-size: 1.1em;
+    font-family: 'Signika Negative', sans-serif;
+    color: #184e77;
+    margin-right: 2rem;
+
+}
+
+/* buttons in cart */
+
+
+.cartButtonContainer {
+
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 2rem;
+    margin-bottom: .5rem;
+
+}
+
+.buttonEmpty {
+         
+         position: relative;
+         height: 2rem;
+         width: 7rem;
+         background-color: #1A535C;
+         color: #F7FFF7;
+         border-radius: 5px;
+         border: none;
+         font-family: 'Signika Negative', sans-serif;
+}
+
+.buttonFinish {
+    
+    position: relative;
+    height: 2rem;
+    width: 7rem;
+    background-color: #00BD9D;
+    color: #F7FFF7;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Signika Negative', sans-serif;
+
+
+}
+
+.buttonEmpty:hover {
+
+    color: #ED6A5A;
+
+}
+
+.buttonFinish:hover {
+
+    color: #b5e48c;
+
+}
+
+footer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-color: #ED6A5A;
+    color: #F7FFF7;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.footerFirstPart {
+    display: flex;
+    width: 100%;
+    height:3rem;
+    border-bottom: 1px rgb(201, 50, 50) solid;
+    justify-content: space-between;
+    
+}
+
+.aFooter {
+    text-decoration: none;
+    color: #ececec;
+    font-family: 'Signika Negative', sans-serif;
+    height: 1.5em;
+    width: 10rem;
+    margin-bottom: 7px;
+}
+
+.aFooter:hover{
+    color:#4ECDC4; 
+}
+
+.footerSecondPart {
+
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1em;
+    color: #ececec;
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    
+}
+h3 {
+
+    display: flex;
+    width: 100%;
+    color: #ececec;
+    justify-content: center;
+}
+
+.weOffer{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.footerText {
+    margin-bottom: .5rem;
+}
+
+.subscribeText{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: #000000;
+}
+
+.emailButtonContainer {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 4em;
+}
+
+.inputEmail {
+    display: flex;
+    border-radius: 5px;
+    height: 2em;
+    width: 15em;
+    align-self: center;
+    margin-bottom: 5px;
+
+
+}
+
+
+
+.buttonSubscribe { 
+
+    display: flex;
+    height: 3em;
+    width: 7rem;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #ececec;
+    border-radius: 3px;
+
+}
+
+.buttonSubscribe:hover{
+    color: #ED6A5A;
+}
+
+.thankYou {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    font-family: 'Signika Negative', sans-serif;
+    color: #61e55c;
+    font-size: 2em;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 342px) {
+
+    .logo {
+        display: none;
+    }
+
+
+
+
+}
+
+@media only screen and (min-width: 585px) {
+
+.productContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .headerNav {
+        justify-content: space-between;
+    }
+
+    .logoAndTitle {
+        margin-left: 15px;
+    }
+
+    .catsAndDogs {
+        font-size: 1.3em;
+    }
+
+    .logo {
+        height: 2.2rem;
+        width: 3.2rem;
+    }
+
+    .cart{
+        
+        margin-right: 15px;
+    }
+
+
+
+    .navAppears {
+        display: flex;
+    }
+
+
+}
+
+@media only screen and (min-width: 966px){
+
+    .cardProduct {
+        margin-bottom: .5rem;
+    }
+
+
+}
