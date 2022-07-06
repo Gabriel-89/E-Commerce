@@ -2,10 +2,8 @@
 
 // import { pepito } from "/firebase.js";
 
-// while importing, use ./ if script is in another folder
-// or / if script is on the same folder.
-
-// console.log(pepito)
+// while importing, use ./ if script is in the same folder
+// otherwise ../ to go inside folder
 
 import { getProducts, getProduct } from "./firebase.js";
 
@@ -55,8 +53,6 @@ cartContainer.append(card);
 
 }
 
-
-
 // update Total Function executed in addToCart();
 
 const updateTotal = (price) => {
@@ -80,30 +76,30 @@ let addToCart = async (e) => {
 
     const productId = e.target.id;
 
-    const productName = e.target.name;
+          if (cartConsulter(productId)){
 
-    if (cartConsulter(productId)){
+              return false
 
-        return false
+          }
+          else {
 
-    }
-    else {
+              let cartContainer = document.querySelector(".cartContainer");
 
-   const productGoneCart = await getProduct(productId); // ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
+              cartContainer.style.display = 'flex'
 
-   amountOfItems(); //refreshes amount of items displayed in cart icon
+              const productGoneCart = await getProduct(productId);
 
-   updateTotal(productGoneCart.data().price)
+          amountOfItems(); //refreshes amount of items displayed in cart icon
 
-   cart.push(productGoneCart)
+          updateTotal(productGoneCart.data().price)
 
-   renderCart();
+          cart.push(productGoneCart)
 
-   
+          renderCart();
 
-    }
+          }
 
-}
+     }
 
 // addToCartEvents!
 
@@ -115,7 +111,6 @@ const addToCartEvents = () => {
 
     }
  
-
 // Card constructor function
 
 let productContainer = document.querySelector(".productContainer");
@@ -155,16 +150,11 @@ const cardConstructor = (products) => {
 
 </div>`
 
-
-
-productContainer.append(card); // This is CRITICAL...
-
-
+productContainer.append(card);
 
 });
 
  addToCartEvents();
-
 
 }
 
@@ -189,11 +179,7 @@ const clickOnCart = () =>{
 
 cartIcon.addEventListener("click", () =>{
 
-    if (cartContainer.style.display === 'none') {
         cartContainer.style.display = 'flex'
-      } else {
-        cartContainer.style.display = 'none'
-      }
 
 })
 
@@ -209,7 +195,7 @@ cartAmount.textContent = 0;
 
 let amountOfItems = () => {
 
-  cartAmount.textContent = cart.length + 1; //arrays start in 0! need to sum 1 to start counting!
+  cartAmount.textContent = cart.length + 1; //arrays start in 0! need to sum 1 to start counting (?)
 
 }
 
@@ -247,6 +233,8 @@ let finishPurchase = () => {
 
     total = 0;
 
+    cartAmount.textContent = 0;
+
     let totalNumber = document.querySelector(".totalNumber");
 
     totalNumber.textContent = 0;
@@ -257,8 +245,11 @@ let finishPurchase = () => {
     let visualCart = document.querySelector(".here");
 
     visualCart.innerHTML= `
+
     <p class="thankYou">Thank you for your Purchase!</p>
+
     `
+
 }
 
 //click Event on button Finish Purchase

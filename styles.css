@@ -1,6 +1,8 @@
 * {
+
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .headerNav {
@@ -12,8 +14,9 @@
     align-items: center;
     
 }
-/* Corregir display FLEX A NONE */
+
 .navAppears {
+
     display:none;
     font-family: 'Signika Negative', sans-serif;
     color:#F7FFF7;
@@ -48,6 +51,7 @@
     
 }
 
+/* cart ICON ON NAV */
 
 .cart {
 
@@ -74,6 +78,8 @@
     text-decoration: none;
 }
 
+ /* Products container */
+
 .productsEntire {
 
     background-color: #dfd291;
@@ -89,6 +95,8 @@
 
 }
 
+/* Products in stock TITLE */
+
 .productsTitle {
     background-image: url(images/resolucionMovil.png);
     background-size: 100% 10rem;
@@ -100,8 +108,6 @@
     align-items: center;
     justify-content: center;
 
- 
-    
 }
 
 .backGround1 {
@@ -151,8 +157,6 @@
     align-items: center;
     margin-bottom: 1rem;
     
-
-
 }
 
 /* Card Styles */
@@ -236,40 +240,46 @@
     opacity: 1;
 }
 
-/* Cart start, with details, starting DISPLAY: NONE on .cartContainer */
+/* CART start, with details, starting with DISPLAY: NONE on .cartContainer */
 
 .cartContainer {
 
     width: 100%;
     flex-direction: column;
-    display: flex;
+    display: none;
     position: relative;
     background-color: #F4F1BB;
-
+    
 }
 
 .productInCart {
+
     width: 100%;
     height: 6.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-bottom: .1px dotted #000000;
+
 }
 
 .imageInCart {
+
     width: 4rem;
     height:6rem;
     align-self: center;
     margin-left: .5rem;
+
 }
 
 .separator {
+
     display: flex;
     width: 100%;
     height: 6.5rem;
     flex-direction: row;
     justify-content: space-between;
+
 }
 
 .containerTitleQuantityPriceCart {
@@ -297,6 +307,7 @@
 }
 
 .quantity {
+
     display: flex;
     width: 8rem;
     height: 1.1em;
@@ -304,10 +315,12 @@
     font-family: 'Signika Negative', sans-serif;
     margin-top: 2rem;
     
-    
 }
 
+/* Functionality on this button is PENDING, for further coding */
+
 .removeFromCart {
+
     display: flex;
     align-items: center;
     align-self: center;
@@ -322,6 +335,7 @@
     color: #000000;
     opacity: 1;
     margin-right: 15px;
+
 }
 
 .priceInCart {
@@ -331,17 +345,14 @@
     font-size: 1.3em;
     font-family: 'Signika Negative', sans-serif;
     margin-left: 3.7em;
-    
-    
- 
 
 }
 
 .detailContainer {
+
     display: flex;
     position: relative;
     width: 100%;
-    
 
 }
 
@@ -367,6 +378,7 @@
     align-self: center;
     border-radius: 10px;
     margin-left: 5px;
+
 }
 
 
@@ -378,6 +390,7 @@
         height: 2rem;
         align-self: flex-end;
         justify-content: flex-end;
+
 }
 
 .total{
@@ -453,6 +466,7 @@ footer {
 }
 
 .footerFirstPart {
+
     display: flex;
     width: 100%;
     height:3rem;
@@ -462,16 +476,20 @@ footer {
 }
 
 .aFooter {
+
     text-decoration: none;
     color: #ececec;
     font-family: 'Signika Negative', sans-serif;
     height: 1.5em;
     width: 10rem;
     margin-bottom: 7px;
+
 }
 
 .aFooter:hover{
+
     color:#4ECDC4; 
+    
 }
 
 .footerSecondPart {
@@ -571,9 +589,6 @@ h3 {
         display: none;
     }
 
-
-
-
 }
 
 @media only screen and (min-width: 450px){
@@ -583,8 +598,7 @@ h3 {
         background-image: url(images/resolucionTablet.png);
         background-size: 100% 15rem;
         height: 15rem;
-        
-        
+           
     }
 
 }
@@ -592,9 +606,11 @@ h3 {
 @media only screen and (min-width: 585px) {
 
 .productContainer {
+
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    
 }
 
 }
